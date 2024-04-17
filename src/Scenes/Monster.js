@@ -27,10 +27,18 @@ class Monster extends Phaser.Scene {
         {
         this.smileX = 300;
         this.smileY = 350;
+
         this.fangsX = 300;
         this.fangsY = 350;
+
         this.eyeX = 300;
         this.eyeY = 300;
+
+        this.rightHornX = 350;
+        this.rightHornY = 260;
+
+        this.leftAntennaX = 250;
+        this.leftAntennaY = 250;
         }
     }
 
@@ -60,38 +68,49 @@ class Monster extends Phaser.Scene {
 
         // Create body
         {
-        my.sprite.body = this.add.sprite(this.bodyX, this.bodyY, "monsterParts", "body_greenF.png");
+            my.sprite.body = this.add.sprite(this.bodyX, this.bodyY, "monsterParts", "body_greenF.png");
         }
 
         // Create smile
         {
-        my.sprite.smile = this.add.sprite(this.smileX, this.smileY, "monsterParts", "mouth_closed_happy.png");
-        my.sprite.smile.visible = true;
+            my.sprite.smile = this.add.sprite(this.smileX, this.smileY, "monsterParts", "mouth_closed_happy.png");
+            my.sprite.smile.visible = true;
         }
 
         // Create eye
         {
-        my.sprite.eye = this.add.sprite(this.eyeX, this.eyeY, "monsterParts", "eye_cute_light.png");
+            my.sprite.eye = this.add.sprite(this.eyeX, this.eyeY, "monsterParts", "eye_cute_light.png");
+        }
+
+        // Create Horn
+        {
+            my.sprite.rightHorn = this.add.sprite(this.rightHornX, this.rightHornY, "monsterParts", "detail_white_horn_large.png");
+        }
+
+        // Create Antenna
+        {
+            my.sprite.leftAntenna = this.add.sprite(this.leftAntennaX, this.leftAntennaY, "monsterParts", "detail_white_antenna_small.png");
+            my.sprite.leftAntenna.flipX = true;
         }
 
         // Create fangs
         {
-        my.sprite.fangs = this.add.sprite(this.fangsX, this.fangsY, "monsterParts", "mouth_closed_fangs.png");
-        my.sprite.fangs.visible = false;
+            my.sprite.fangs = this.add.sprite(this.fangsX, this.fangsY, "monsterParts", "mouth_closed_fangs.png");
+            my.sprite.fangs.visible = false;
         }
 
         // Create legs
         {
-        my.sprite.leftLeg = this.add.sprite(this.leftLegX, this.leftLegY, "monsterParts", "leg_redC.png");
-        my.sprite.leftLeg.flipX = true;
-        my.sprite.rightLeg = this.add.sprite(this.rightLegX, this.rightLegY, "monsterParts", "leg_blueC.png");
+            my.sprite.leftLeg = this.add.sprite(this.leftLegX, this.leftLegY, "monsterParts", "leg_redC.png");
+            my.sprite.leftLeg.flipX = true;
+            my.sprite.rightLeg = this.add.sprite(this.rightLegX, this.rightLegY, "monsterParts", "leg_blueC.png");
         }
         
         // Create arms
         {
-        my.sprite.leftArm = this.add.sprite(this.leftArmX, this.leftArmY, "monsterParts", "arm_blueE.png");
-        my.sprite.leftArm.flipX = true;
-        my.sprite.rightArm = this.add.sprite(this.rightArmX, this.rightArmY, "monsterParts", "arm_redE.png");
+            my.sprite.leftArm = this.add.sprite(this.leftArmX, this.leftArmY, "monsterParts", "arm_blueE.png");
+            my.sprite.leftArm.flipX = true;
+            my.sprite.rightArm = this.add.sprite(this.rightArmX, this.rightArmY, "monsterParts", "arm_redE.png");
         }
 
         
