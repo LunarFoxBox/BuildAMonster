@@ -49,7 +49,7 @@ class Monster extends Phaser.Scene {
 
     create() {
         let my = this.my;   // create an alias to this.my for readability
-
+        let shiftAmount = 10;
 
         // Create the main body sprite
         //
@@ -105,7 +105,6 @@ class Monster extends Phaser.Scene {
             };
 
             let shift = 0; // The amount to shift the monster right and left
-
             // Determine effect based on what key was pressed
             switch(event.code){
                 case("KeyS"):
@@ -115,10 +114,10 @@ class Monster extends Phaser.Scene {
                     changeVisible(false, true);
                     break;
                 case("KeyA"):
-                    shift = -10;
+                    shift = -shiftAmount;
                     break;
                 case("KeyD"):
-                    shift = 10;
+                    shift = shiftAmount;
                     break;
             }
             
